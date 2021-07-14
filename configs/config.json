@@ -1,0 +1,13 @@
+{
+  "env": "{{NODE_ENV}}",
+  "appPort": "{{PORT}}",
+  "jwtSecret":  "{{JWT_SECRET}}",
+  "db" : {
+    "dialect": "{{DB_DIALECT}}",
+    "host": "{{DB_HOST}}",
+    "port": "{{DB_PORT}}",
+    "database": "{{DB_DATABASE}}",
+    "username": "{{DB_USERNAME}}",
+    "password": "{{DB_PASSWORD}}"
+  }
+}

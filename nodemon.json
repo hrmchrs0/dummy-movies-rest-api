@@ -1,0 +1,3 @@
+{
+  "watch": ["lib", "packages.js", "app.js"]
+}

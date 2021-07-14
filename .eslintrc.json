@@ -1,0 +1,11 @@
+{
+  "extends": "webbylab",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "newline-after-var": "off",
+    "no-magic-numbers": "off",
+    "callback-return": "off"
+  }
+}

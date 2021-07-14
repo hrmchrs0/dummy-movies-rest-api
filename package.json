@@ -1,0 +1,69 @@
+{
+  "name": "dummy-movies-rest-api",
+  "version": "1.0.0",
+  "description": "Movies REST API",
+  "author": "hrmchrs0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrmchrs0/dummy-movies-rest-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrmchrs0/dummy-movies-rest-api/issues"
+  },
+  "homepage": "https://github.com/hrmchrs0/dummy-movies-rest-api#readme",
+  "scripts": {
+    "lint": "eslint --fix lib migrations packages.js app.js",
+    "nodemon": "nodemon app.js",
+    "docker:dev:up": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml up",
+    "docker:dev:down": "docker-compose -f docker/docker-compose.yml -f docker/docker-compose.dev.yml down",
+    "docker:up": "docker-compose -f docker/docker-compose.yml up",
+    "docker:down": "docker-compose -f docker/docker-compose.yml down",
+    "start": "NODE_ENV=production node app.js",
+    "migrate": "sequelize db:migrate --config lib/config.cjs --env db"
+  },
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "chista": "1.0.0",
+    "cls-hooked": "4.2.2",
+    "confme": "1.1.0",
+    "cors": "2.8.5",
+    "express": "4.17.1",
+    "json-pointer": "0.6.1",
+    "jsonwebtoken": "8.5.1",
+    "livr": "2.3.3",
+    "livr-extra-rules": "1.2.1",
+    "lodash": "4.17.21",
+    "multer": "1.4.2",
+    "pg": "8.6.0",
+    "pino": "6.12.0",
+    "rename-keys": "2.0.1",
+    "sequelize": "6.6.5",
+    "sequelize-cli": "6.2.0",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.30.0",
+    "eslint-config-webbylab": "5.4.1",
+    "eslint-plugin-fetch": "0.0.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-more": "1.0.3",
+    "eslint-plugin-no-require-lodash": "1.1.0",
+    "eslint-plugin-prefer-spread": "1.0.3",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-security": "1.4.0",
+    "husky": "7.0.1",
+    "lint-staged": "11.0.1",
+    "nodemon": "2.0.12",
+    "pino-pretty": "5.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
