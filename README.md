@@ -18,7 +18,8 @@ This web application allows users to manage movie records. A C4 container diagra
 ## RUN IN CONTAINER
 1. create .env file in project root directory (it could be empty)
 2. npm run docker:dev:up
-3. npm run migrate
+3. npm install
+4. npm run migrate
 
 ## NPM SCRIPTS
 * `lint` - runs eslint for: lib/, migrations/, app.js
